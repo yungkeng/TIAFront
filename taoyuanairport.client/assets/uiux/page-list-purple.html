@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- fontawsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- <link rel="stylesheet" href="css/all_shared.css" /> -->
+  <link rel="stylesheet" href="css/globals.css" />
+
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/nav.js"></script>
+  <title>桃機-表單</title>
+</head>
+
+<body class="style-purple pageA-active">
+  <!-- 上方header -->
+  <!-- 桌機header -->
+  <header class="desktop">
+    <div class="headerbox">
+      <div class="navigation">       
+        <a class="nav-bar-pad home" onclick="openCellphoneNav()">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+        <a class="home">
+          <img src="./images/main-menu-icon-3.svg" alt="">
+        </a>
+        <ul class="breadcrumb">
+          <li>
+            <a href="#">
+              <img class="img" src="./images/icon-for-9-system-32pix-1.svg">
+            </a>
+          </li>
+          <li><a href="#">快速功能清單</a></li>
+          <li><a href="#">快速功能清單</a></li>
+          <li><a href="#">快速功能清單</a></li>
+        </ul>
+        <!--平板版本-->
+        <ul class="breadcrumb breadcrumb-pad">
+          <li>
+            <a href="#">
+              <img class="img" src="./images/icon-for-9-system-32pix-1.svg">
+              人力資源管理系統
+            </a>
+          </li>
+          </ul>
+      </div>
+      <div class="operation">
+        <div class="group">
+          <div class="countdown">
+            <div class="alarm">
+              <img src="./images/Main_Menu_Icon.png" alt="鬧鐘icon" />
+            </div>
+            <div class="txt">
+              <span>登出倒數：</span>
+              <span>20分0秒</span>
+            </div>
+          </div>
+          <div class="date">
+            <span>2023年10月26日 週三 PM 10:59</span>
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="button" class="setting">
+            <img class="main-menu-icon" src="images/main-menu-icon-1.svg">
+            <div class="version">
+              <p>
+                <span class="title">程式代號：</span>
+                <span class="value">D000-F-01-05-02-06</span>
+              </p>
+              <p>
+                <span class="title">系統版別：</span>
+                <span class="value">v0.0.6</span>
+              </p>
+              <p>
+                <span class="title">版本日期：</span>
+                <span class="value">2023-08-30</span>
+              </p>
+            </div>
+          </button>
+          <button type="button" class="info">
+            <img class="main-menu-icon" src="images/main-menu-icon.svg">
+          </button>
+          <button type="button" class="logout">
+            <img class="main-menu-icon" src="images/settings.svg">
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- 手機header -->
+  <header class="cellphone">
+    <div class="function">
+      <button type="button" class="info">
+        <img src="./images/button-prompt.svg" alt="">
+      </button>
+    </div>
+    <h1 class="title">人力資源管理系統</h1>
+    <div class="nav-bar" onclick="openCellphoneNav()">
+      <button type="button">
+        <img src="./images/menu_img.svg" alt="">
+      </button>
+    </div>
+  </header>
+  <!-- 下方區域 -->
+  <div class="container">
+    <!-- 左側選單列表 -->
+    <nav class="desktop">
+      <ul class="nav-list">
+        <li>
+          <div class="nav-first">
+            <div class="user">
+              <img src="./images/Head_Icon.png" alt="使用者大頭貼" />
+            </div>
+            <div class="txt">
+              <div class="office">使用者單位名稱</div>
+              <div class="team">系統管理者</div>
+              <div class="last-login">最後登入IP：192.168.91.35</p>
+              </div>
+            </div>
+        </li>
+        <li id="nav-list-1">
+          <div class="nav-first" onclick="navClick('nav-list-1')">
+            <i class="fa fa-lg fa-fw fa-home"></i>
+            <div class="txt">首頁</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-person"></i>
+                  <div class="txt">首頁任用</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-address-card"></i>
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-file"></i>
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-address-card"></i>
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-check"></i>
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id="nav-list-2">
+          <div class="nav-first" onclick="navClick('nav-list-2')">
+            <i class="fa fa-bullhorn fa-fw fa-lg"></i>
+            <div class="txt">系統公告</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-person"></i>
+                  <div class="txt">系統公告</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-address-card"></i>
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-file"></i>
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-address-card"></i>
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-check"></i>
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id="nav-list-3">
+          <div class="nav-first" onclick="navClick('nav-list-3')">
+            <i class="fa fa-lg fa-fw fa-cog"></i>
+            <div class="txt">系統管理</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-person"></i>
+                  <div class="txt">系統管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-address-card"></i>
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-file"></i>
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="logo">
+        <img src="./images/airport-logo.svg" alt="桃機logo" />
+      </div>
+    </nav>
+    <!-- 中間主要區域 -->
+    <main>
+      <!-- 手機用breadcrumb -->
+      <ul class="breadcrumb cellphone">
+        <li><a href="#">人員任用</a></li>
+        <li><a href="#">查詢員工基本資料</a></li>
+        <li>
+          <a href="#" class="active page-list">資料查詢</a>
+          <a href="#" class="active pageB">員工資料</a>
+        </li>
+      </ul>
+
+      <!-- 共用banner,其他區域 -->
+      <div class="banner">        
+      </div>
+      <div class="another-area page-addbox-flex">
+
+        <h2 class="page-list">  
+          <div class="page-titlebox">
+            <span class="page-title">資料查詢</span>
+            <img class="vector" src="images/vector-150-1.svg">
+          </div>
+          
+          <button type="button" class="btn-style btn-style-purple tag">
+            <img class="img" src="images/button-icon24-5.svg">
+            <span>設為捷徑</span>
+          </button>          
+        </h2>
+
+       <!--搜尋列表-->
+        <div class="wrapper page-list">          
+          
+          <div class="input-groupbox">
+            <div class="input-group">
+              <span>單位名稱</span>
+              <select class="select-style ">
+                <option>請選擇</option>
+              </select>
+            </div>            
+            <div class="input-group">
+              <span>姓名</span>
+              <select class="select-style">
+                <option >請選擇</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <span>狀態</span>
+              <select class="select-style">
+                <option>請選擇</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <span>英文名</span>
+              <input type="text" class="input-item">
+            </div>
+            <div class="input-group">
+              <span>姓名</span>
+              <select class="select-style">
+                <option >請選擇</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <span>狀態</span>
+              <select class="select-style">
+                <option>請選擇</option>
+              </select>
+            </div>
+
+          </div>
+          <!--分隔線-->
+          <div class="line">          
+          </div>      
+          <!--分隔線-->
+        </div>
+        <!--按鈕-->
+        <div class="buttons main-btnbox">
+          <div class="group">
+            <button type="button" class="btn-style btn-c-red">
+              <img class="img" src="images/icon_del.svg">
+              <span>刪除</span>
+            </button>
+            <button type="button" class="btn-style btn-c-red">
+              <img class="img" src="images/main-menu-icon-16.svg">
+              <span>清除</span>
+            </button>
+            <button type="button" class="btn-style btn-c-gray">
+              <img class="img" src="images/main-menu-icon-15.svg">
+              <span>查詢</span>
+            </button>
+          </div>
+          <button type="button" class="btn-p-w btn-style btn-c-blue ">
+            <img class="img" src="images/union-1.svg">
+            <span>新增</span>
+          </button>
+        </div>
+        <!--按 鈕-->
+        <!--TABLE列表-->
+        <div class="table-group">
+          <div class="table-groupbox">
+            <div class="overflowbox"><!--讓橫向卷軸有效果的div-->
+              <div class="table-ul-group" >
+              <!--搜尋層-->
+                <ul class="filter-btnbox">
+                  <li>
+                    <div class="table-filter-icon check-box" style="width: 55px;">
+                      <input type="checkbox" name="" id="">
+                    </div>
+                  </li>
+                  <li>
+                    <button class="filter-btn-on table-filter-icon" style="width:175px;">
+                      <span class="text-wrapper">單位名稱</span>
+                      <img class="filter-img" src="images/property-1-filter.svg">
+                      <img class="filter-img-hover" src="images/property-1-sort-a.svg">
+                    </button>
+                  </li>
+                  <li>
+                  <button class="table-filter-icon" style="width:124px;">
+                    <span class="text-wrapper">員工編號</span>
+                    <img class="filter-img" src="images/property-1-filter.svg">
+                    <img class="filter-img-hover" src="images/property-1-sort-a.svg">                  
+                  </button>
+                  </li>
+                  <li>
+                    <button class="table-filter-icon" style="width:190px;">
+                    <span class="text-wrapper">員工姓名</span>
+                    <img class="filter-img" src="images/property-1-filter.svg">
+                    <img class="filter-img-hover" src="images/property-1-sort-a.svg">
+                  </button>
+                  </li>
+                  <li>
+                    <button class="table-filter-icon" style="width:88px;">
+                    <span class="text-wrapper">狀態</span>
+                    <img class="filter-img" src="images/property-1-filter.svg">
+                    <img class="filter-img-hover" src="images/property-1-sort-a.svg">
+                  </button>
+                  </li>
+                  <li>
+                    <button class="table-filter-icon" style="width:88px;">
+                      <span class="text-wrapper">職級</span>
+                      <img class="filter-img" src="images/property-1-filter.svg">
+                      <img class="filter-img-hover" src="images/property-1-sort-a.svg">
+                    </button>  
+                  </li>
+                  <li>
+                    <button class="table-filter-icon" style="width:176px;">
+                    <span class="text-wrapper">辦公室電話</span>
+                    <img class="filter-img" src="images/property-1-filter.svg">
+                    <img class="filter-img-hover" src="images/property-1-sort-a.svg">
+                  </button>
+                  </li>
+                  <li>
+                    <button class="table-filter-icon" style="width:212px;">
+                    <span class="text-wrapper">電郵信箱</span>
+                    <img class="filter-img" src="images/property-1-filter.svg">
+                    <img class="filter-img-hover" src="images/property-1-sort-a.svg">
+                  </button>
+                  </li>                  
+                  <li>
+                    <button class="table-filter-icon" style="width:212px;">
+                    <span class="text-wrapper">電郵信箱</span>
+                    <img class="filter-img" src="images/property-1-filter.svg">
+                    <img class="filter-img-hover" src="images/property-1-sort-a.svg">
+                  </button>
+                  </li>
+                  
+                  <li>
+                    <button class="table-filter-icon" style="width:212px;">
+                    <span class="text-wrapper">電郵信箱</span>
+                    <img class="filter-img" src="images/property-1-filter.svg">
+                    <img class="filter-img-hover" src="images/property-1-sort-a.svg">
+                  </button>
+                  </li>
+                </ul>    
+              <!--搜尋層end-->
+              <!--table層-->
+              <ul class="tablebox">
+                <li class="mobile-titlebox"><!--手機板顯示-->
+                  <div class="text">
+                    員工列表
+                  </div>
+                  <div class="searchbox input-style" >
+                    <img src="./images/icon_searchbox.svg" alt="">
+                    <input type="text" class="" placeholder="請輸入">
+                  </div>
+                </li>
+                <li class="tablebox-li">
+                  <ul>
+                    <li  style="width: 55px;">
+                      <div class="check-box">
+                        <input type="checkbox" name="" id="">
+                      </div>
+                    </li>
+                    <li  style="width:175px;">
+                      <b class="mobile-content">單位名稱</b>
+                      單位名稱預設為十個字
+                    </li>
+                    <li  style="width:124px;">
+                      <b class="mobile-content">員工編號</b>
+                      ABC12345678
+                    </li>
+                    <li style="width:190px;">
+                      <b class="mobile-content">員工姓名</b>
+                      達斯吉姆嵐．嵐琥．亞諾
+                    </li>
+                    <li style="width:88px;">
+                      <b class="mobile-content">狀態</b>
+                      離職
+                    </li>
+                    <li style="width:88px;">
+                      <b class="mobile-content">職級</b>
+                      13職等
+                    </li>
+                    <li  style="width:176px;">
+                      <b class="mobile-content">辦公室電話</b>
+                      02-12345678 ＃ 2023
+                    </li>
+                    <li style="width:212px;">
+                      <b class="mobile-content">電郵信箱</b>
+                      X12345678@gmail.com
+                    </li>
+                    <li style="width:212px;">
+                      <b class="mobile-content">電郵信箱</b>
+                      X12345678@gmail.com
+                    </li>
+                    <li style="width:212px;">
+                      <b class="mobile-content">電郵信箱</b>
+                      X12345678@gmail.com
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="tablebox-li">
+                  <ul>
+                    <li  style="width: 55px;">
+                      <div class="check-box">
+                        <input type="checkbox" name="" id="">
+                      </div>
+                    </li>
+                    <li  style="width:175px;">
+                      <b class="mobile-content">單位名稱</b>
+                      單位名稱預設為十個字
+                    </li>
+                    <li  style="width:124px;">
+                      <b class="mobile-content">員工編號</b>
+                      ABC12345678
+                    </li>
+                    <li style="width:190px;">
+                      <b class="mobile-content">員工姓名</b>
+                      達斯吉姆嵐．嵐琥．亞諾
+                    </li>
+                    <li style="width:88px;">
+                      <b class="mobile-content">狀態</b>
+                      離職
+                    </li>
+                    <li style="width:88px;">
+                      <b class="mobile-content">職級</b>
+                      13職等
+                    </li>
+                    <li  style="width:176px;">
+                      <b class="mobile-content">辦公室電話</b>
+                      02-12345678 ＃ 2023
+                    </li>
+                    <li style="width:212px;">
+                      <b class="mobile-content">電郵信箱</b>
+                      X12345678@gmail.com
+                    </li>
+                    <li style="width:212px;">
+                      <b class="mobile-content">電郵信箱</b>
+                      X12345678@gmail.com
+                    </li>
+                    <li style="width:212px;">
+                      <b class="mobile-content">電郵信箱</b>
+                      X12345678@gmail.com
+                    </li>
+                  </ul>
+                </li>
+              </ul>                   
+              <!--table層end-->
+              </div>
+            </div>
+          </div> 
+       
+          <!--頁碼層-->
+          <div class="list-page-control">
+            <div class="frame-text">
+              <div class="element-wrapper">
+                <p class="element">
+                  <span class="span">顯示 </span>
+                  <b>1 </b>
+                  <span class="span">至 </span>
+                  <b>50</b>
+                  <span class="span"> 筆，共 </span>
+                  <b>5 </b>
+                  <span class="span">筆資料</span>
+                </p>
+              </div>
+              <div class="frame-number">
+                <button><img class="number-img" src="images/main-menu-icon-30.svg">
+                </button>
+                <button>
+                  <img class="number-img" src="images/main-menu-icon-29.svg">
+                </button>
+                <div class="number-text">1</div>
+                <button><img class="number-img" src="images/main-menu-icon-11.svg"></button>
+                <button>
+                  <img class="number-img" src="images/main-menu-icon-10.svg">
+                </button>
+              </div>
+              <div class="page-control">
+                <select class="select-style text-wrapper-select">
+                  <option>
+                    10
+                  </option>
+                </select>    
+            </div>
+
+          </div>
+          </div>
+          <!--頁碼層-->
+        </div>
+        <!--TABLE列表-->
+      </div>
+    </main>
+  </div>
+  <!-- 手機nav -->
+  <nav class="cellphone">
+    <div class="wrapper">
+      <!-- 上方標題 -->
+      <div class="top">
+        <div class="title">人力資源管理系統</div>
+        <div class="close" onclick="closeCellphoneNav()">
+          <i class="fa-solid fa-x"></i>
+        </div>
+      </div>
+      <!-- 日期 -->
+      <div class="date">
+        <span>2023年10月26日 週三 PM 10:59</span>
+      </div>
+      <!-- nav -->
+      <ul class="nav-list" id="nav-cellphone">
+        <li id="nav-list-cellphone-1">
+          <div class="nav-first" onclick="navCellphoneClick('nav-list-cellphone-1')">
+            <i class="fa fa-lg fa-fw fa-home"></i>
+            <div class="txt">首頁</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              <li >
+                <a href="#" onclick="changePage()">
+                  <div class="txt">首頁任用</div>
+                </a>
+              </li>
+              <li id="nav-second-1">
+                <div class="nav-second-btn" onclick="tmpthird('nav-second-1')">
+                  <div class="txt">基本資料</div>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>    
+                <div class="nav-third">
+                  <ul class="nav-third-list">
+                    <li>
+                      <a href="#">
+                        <div class="txt">
+                          基本資料編輯
+                        </div>                      
+                      </a>
+                    </li>
+                  </ul>
+                </div>  
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id="nav-list-cellphone-2">
+          <div class="nav-first" onclick="navCellphoneClick('nav-list-cellphone-2')">
+            <i class="fa fa-bullhorn fa-fw fa-lg"></i>
+            <div class="txt">系統公告</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              
+              <li id="nav-second-2">
+                <div class="nav-second-btn" onclick="tmpthird('nav-second-2')">
+                  <div class="txt">系統公告</div>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>    
+                <div class="nav-third">
+                  <ul class="nav-third-list">
+                    <li>
+                      <a href="#">
+                        <div class="txt">
+                          系統公告編輯
+                        </div>                      
+                      </a>
+                    </li>
+                  </ul>
+                </div>  
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id="nav-list-cellphone-3">
+          <div class="nav-first" onclick="navCellphoneClick('nav-list-cellphone-3')">
+            <i class="fa fa-lg fa-fw fa-cog"></i>
+            <div class="txt">系統管理</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">系統管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <!-- 登出 -->
+      <div class="logout">
+        <button type="button">
+          <i class="fa fa-sign-out"></i>
+          <span>登出</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- 手機footer -->
+  <footer class="cellphone">
+    <div class="logo">
+      <img src="./images/Main_Menu_Logo_footer.png" alt="桃機logo" />
+    </div>
+    <div class="version">
+      <p>
+        <span class="title">程式代號：</span>
+        <span class="value">D000-F-01-05-02-06</span>
+      </p>
+      <p>
+        <span class="title">系統版別：</span>
+        <span class="value">v0.0.6</span>
+      </p>
+      <p>
+        <span class="title">版本日期：</span>
+        <span class="value">2023-08-30</span>
+      </p>
+    </div>
+  </footer>
+  <!-- 遮罩 -->
+  <div class="container-cover"></div>
+</body>
+
+</html>

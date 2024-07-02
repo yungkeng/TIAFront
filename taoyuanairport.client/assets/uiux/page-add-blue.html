@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- fontawsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/globals.css" />
+  <script src="js/nav.js"></script>
+  <title>桃機-新增</title>
+</head>
+
+<body class="style-blue pageA-active">
+  <!-- 上方header -->
+  <!-- 桌機header -->
+  <header class="desktop">
+    <div class="headerbox">
+      <div class="navigation">       
+        <a class="nav-bar-pad home" onclick="openCellphoneNav()">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+        <a class="home">
+          <img src="./images/main-menu-icon-3.svg" alt="">
+        </a>
+        <ul class="breadcrumb">
+          <li>
+            <a href="#">
+              <img class="img" src="./images/icon-for-9-system-32pix-1.svg">
+            </a>
+          </li>
+          <li><a href="#">快速功能清單</a></li>
+          <li><a href="#">快速功能清單</a></li>
+          <li><a href="#">快速功能清單</a></li>
+        </ul>
+        <!--平板版本-->
+        <ul class="breadcrumb breadcrumb-pad">
+          <li>
+            <a href="#">
+              <img class="img" src="./images/icon-for-9-system-32pix-1.svg">
+              人力資源管理系統
+            </a>
+          </li>
+          </ul>
+      </div>
+      <div class="operation">
+        <div class="group">
+          <div class="countdown">
+            <div class="alarm">
+              <img src="./images/Main_Menu_Icon.png" alt="鬧鐘icon" />
+            </div>
+            <div class="txt">
+              <span>登出倒數：</span>
+              <span>20分0秒</span>
+            </div>
+          </div>
+          <div class="date">
+            <span>2023年10月26日 週三 PM 10:59</span>
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="button" class="setting">
+            <img class="main-menu-icon" src="images/main-menu-icon-1.svg">
+            <div class="version">
+              <p>
+                <span class="title">程式代號：</span>
+                <span class="value">D000-F-01-05-02-06</span>
+              </p>
+              <p>
+                <span class="title">系統版別：</span>
+                <span class="value">v0.0.6</span>
+              </p>
+              <p>
+                <span class="title">版本日期：</span>
+                <span class="value">2023-08-30</span>
+              </p>
+            </div>
+          </button>
+          <button type="button" class="info">
+            <img class="main-menu-icon" src="images/main-menu-icon.svg">
+          </button>
+          <button type="button" class="logout">
+            <img class="main-menu-icon" src="images/settings.svg">
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- 手機header -->
+  <header class="cellphone">
+    <div class="function">
+      <button type="button" class="info">
+        <img src="./images/button-prompt.svg" alt="">
+      </button>
+    </div>
+    <h1 class="title">人力資源管理系統</h1>
+    <div class="nav-bar" onclick="openCellphoneNav()">
+      <button type="button">
+        <img src="./images/menu_img.svg" alt="">
+      </button>
+    </div>
+  </header>
+  <!-- 下方區域 -->
+  <div class="container">
+    <!-- 左側選單列表 -->
+    <nav class="desktop">
+      <ul class="nav-list">
+        <li>
+          <div class="nav-first">
+            <div class="user">
+              <img src="./images/Head_Icon.png" alt="使用者大頭貼" />
+            </div>
+            <div class="txt">
+              <div class="office">使用者單位名稱</div>
+              <div class="team">系統管理者</div>
+              <div class="last-login">最後登入IP：192.168.91.35</p>
+              </div>
+            </div>
+        </li>
+        <li id="nav-list-1">
+          <div class="nav-first" onclick="navClick('nav-list-1')">
+            <i class="fa fa-lg fa-fw fa-home"></i>
+            <div class="txt">首頁</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-person"></i>
+                  <div class="txt">首頁任用</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-address-card"></i>
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-file"></i>
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-address-card"></i>
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-check"></i>
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id="nav-list-2">
+          <div class="nav-first" onclick="navClick('nav-list-2')">
+            <i class="fa fa-bullhorn fa-fw fa-lg"></i>
+            <div class="txt">系統公告</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-person"></i>
+                  <div class="txt">系統公告</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-address-card"></i>
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-file"></i>
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-address-card"></i>
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-check"></i>
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id="nav-list-3">
+          <div class="nav-first" onclick="navClick('nav-list-3')">
+            <i class="fa fa-lg fa-fw fa-cog"></i>
+            <div class="txt">系統管理</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-person"></i>
+                  <div class="txt">系統管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-address-card"></i>
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-file"></i>
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="logo">
+        <img src="./images/airport-logo.svg" alt="桃機logo" />
+        
+      </div>
+    </nav>
+    <!-- 中間主要區域 -->
+    <main>
+      <!-- 手機用breadcrumb -->
+      <ul class="breadcrumb cellphone">
+        <li><a href="#">人員任用</a></li>
+        <li><a href="#">查詢員工基本資料</a></li>
+        <li>
+          <a href="#" class="active page-list">資料查詢</a>
+          <a href="#" class="active pageB">員工資料</a>
+        </li>
+      </ul>
+
+      <!-- 共用banner,其他區域 -->
+      <div class="banner">
+      </div>
+      <div class="another-area page-addbox-flex">
+        <!--標題-->
+        <h2 class="page-list page-add-title">  
+          <div class="page-titlebox">
+            <span class="page-title">新增員工資料</span>
+            <div class="line"></div>            
+          </div>                
+        </h2>
+       <!--標題end-->
+
+       <!--頁籤-->
+        <div class="page-bookmark">
+          <div class="overflowbox"><!--讓橫向卷軸有效果的div-->
+            <ul class="bookmarkbox">
+              <li id="mark-active">
+                <div class="font">
+                  基本員工資料
+                </div>
+                <div class="bottom-line"></div>
+              </li>
+              <li>
+                <div class="font">
+                  家庭成員
+                </div>
+                <div class="bottom-line"></div>
+              </li>
+              <li>
+                <div class="font">
+                  教育程度
+                </div>
+                <div class="bottom-line"></div>
+              </li>
+              <li>
+                <div class="font">
+                  專業技能
+                </div>
+                <div class="bottom-line"></div>
+              </li>
+              <li>
+                <div class="font">
+                  語言證照
+                </div>
+                <div class="bottom-line"></div>
+              </li>
+              <li>
+                <div class="font">
+                  工作經歷
+                </div>
+                <div class="bottom-line"></div>
+              </li>
+              <li>
+                <div class="font">
+                  專業證照
+                </div>
+                <div class="bottom-line"></div>
+              </li>
+              <li>
+                <div class="font">
+                  培訓資料
+                </div>
+                <div class="bottom-line"></div>
+              </li>
+              <li>
+                <div class="font">
+                  獎懲紀錄
+                </div>
+                <div class="bottom-line"></div>
+              </li>
+              <li>
+                
+                <div class="font">
+                  兵役紀錄
+                </div>
+                <div class="bottom-line"></div>
+              </li>
+              <li>
+                <div>
+                <div class="font">
+                  專案經歷
+                </div>
+                <div class="bottom-line"></div>
+              </div>
+              </li>
+            </ul>
+          </div>
+          <div class="line"></div>
+        </div>
+        <!--頁籤end--> 
+
+        <!--頁面內容-->
+        <div class="wrapper page-content">
+          <div class="group-content">
+            <div class="group-content-box">
+              <h2 class="page-list page-add-title">  
+                <div class="page-titlebox">
+                  <span class="page-title">新增員工資料</span>
+                  <div class="line"></div>            
+                </div>                
+              </h2>
+              <div class="inputbox-group onefield">
+                <ul>
+                  <li> 
+                    <div class="title-size-1 input-style input-title-blue ">
+                      員工編號
+                    </div>
+                    <input type="text" class="input-size-1 input-gray input-style">
+                  </li>
+                  <li> 
+                    <div class="title-size-1 input-style input-title-blue ">
+                      員工編號
+                    </div>
+                    <input type="text" class="input-size-2 input-gray input-style input-date">         
+                    <div class="input-style input-font">~</div>           
+                    <input type="text" class="input-size-2 input-gray input-style input-date">
+                  </li>
+                  <li> 
+                    <div class="title-check title-size-1 input-style">
+                      <div class="check-box">
+                        <input type="checkbox"  name="" id="">
+                        <span class="text">同上</span>
+                      </div>
+                    </div>
+                    <input type="text" class="input-size-1 input-style">
+                  </li>
+                  <li class="inputbox-textarea">
+                    <div class="title-size-1 input-style input-title-blue ">
+                      員工編號
+                    </div>
+                    <textarea class="input-style"></textarea>
+                  </li>
+                  <li class="input-name">
+                    <div class="title-size-1 input-style input-title-orange ">
+                      <span class="font-mark">＊</span>中文姓
+                    </div>
+                    <input type="text" class=" input-style input-size-2" >
+                    <div class="title-size-2 input-style input-title-orange ">
+                      <span class="font-mark w-none">＊</span>
+                      中文名
+                    </div>
+                    <input type="text" class="input-size-2 input-style">                    
+                  </li>
+                  <li class="input-name">
+                    <div class="title-size-1 input-style input-title-orange ">
+                      <span class="font-mark">＊</span>英文姓
+                    </div>
+                    <input type="text" class=" input-style input-size-2" >
+                    <div class="title-size-2 input-style input-title-orange ">
+                      <span class="font-mark w-none">＊</span>
+                      英文名
+                    </div>
+                    <input type="text" class="input-size-2 input-style">                    
+                  </li>
+                  
+                  <li> 
+                    <div class="title-size-1 input-style input-title-orange title-size-p-2">
+                      <span class="font-mark">＊</span>
+                      身分證字號(居留證號)
+                    </div>
+                    <input type="text" class="input-size-1 input-size-4 input-style input-red-border"><div class="red-font"><span>!</span>請填寫身分證居留號</div>
+                  </li>
+                  <li> 
+                    <div class="title-size-1 input-style input-title-orange">
+                      <span class="font-mark">＊</span>
+                      員工編號
+                    </div>
+                    <input type="text" class="input-size-1 input-style input-black-font">   
+                    <div class="black-font">灰黑色注意事項</div>
+                  </li>
+                  
+                  <li>
+                    <div class="title-size-1 input-style input-title-orange title-size-p-1">
+                      <span class="font-mark">＊</span>身分別
+                    </div>
+                    <div class="input-size-3 input-style check-box">
+                      <div class="check-box-in">
+                        <input type="checkbox"  name="" id="">
+                        <span class="text">本國籍</span>
+                      </div>
+                      <div class="check-box-in">
+                        <input type="checkbox" name="" id="">
+                        <span class="text">外國籍</span>
+                      </div>
+                    </div>    
+                  </li>
+                  <li>
+                    <div class="title-size-1 input-style input-title-orange title-size-p-1">
+                      <span class="font-mark">＊</span>身分別
+                    </div>
+                    <div class="input-size-3 input-style check-box">
+                      <div class="check-box-in">
+                        <input type="radio"  name="" id="">
+                        <span class="text">本國籍</span>
+                      </div>
+                      <div class="check-box-in">
+                        <input type="radio" name="" id="">
+                        <span class="text">外國籍</span>
+                      </div>
+                    </div>    
+                  </li>
+                  <li>
+                    <div class="title-size-1 input-style input-title-orange ">
+                      <span class="font-mark">＊</span>中文姓
+                    </div>
+                    <div class="input-size-1 input-style check-box">
+                     
+                      <div class="check-box-in">
+                        <input type="checkbox" name="" id="">
+                        <span class="text">外國籍</span>
+                    </div>
+                    
+                    </div>    
+                  </li>
+                  
+                  <li>
+                    <div class="title-size-1 input-style input-title-orange ">
+                      <span class="font-mark">＊</span>中文姓
+                    </div>                    
+                    <select class="select-style input-large input-size-1">
+                      <option>請選擇</option>
+                    </select>
+                  </li>
+                  <li>
+                    <div class="title-size-1 input-style input-title-orange ">
+                      <span class="font-mark">＊</span>中文姓
+                    </div>                    
+                    <select class="select-style input-large input-size-2">
+                      <option>請選擇</option>
+                    </select>                                     
+                    <select class="select-style input-large input-size-2">
+                      <option>請選擇</option>
+                    </select>
+                  </li>
+
+                  <li> 
+                    <div class="title-size-1 input-style input-title-gray ">
+                      員工編號
+                    </div>
+                    <input type="text" class="input-size-1 input-style">
+                    
+                  </li>
+                  <li> 
+                    <div class="title-size-1 input-style input-title-gray ">
+                      員工編號
+                    </div>
+                    <input type="text" class="input-size-1 input-style">
+                  </li>
+
+                </ul>
+               
+              </div>
+            </div>
+          </div>  
+          <div class="group-content">
+            <div class="group-content-box">
+            <h2 class="page-list page-add-title">  
+              <div class="page-titlebox">
+                <span class="page-title">新增員工資料</span>
+                <div class="line"></div>            
+              </div>                
+            </h2>
+            <div class="inputbox-group">
+              <ul>
+                <li> 
+                  <div class="title-size-1 input-style input-title-blue ">
+                    員工編號
+                  </div>
+                  <input type="text" class="input-size-1 input-gray input-style">
+                </li>
+                <li> 
+                  <div class="title-check title-size-1 input-style">
+                    <div class="check-box">
+                      <input type="checkbox"  name="" id="">
+                      <span class="text">同上</span>
+                    </div>
+                  </div>
+                  <input type="text" class="input-size-1 input-style">
+                </li>
+                
+                <li> 
+                  <div class="title-size-1 input-style input-title-gray">
+                    員工編號
+                  </div>
+                  <input type="text" class="input-size-1 input-style">
+                </li>
+                
+                <li> 
+                  <div class="title-size-1 input-style input-title-gray">
+                    員工編號
+                  </div>
+                  <input type="text" class="input-size-1 input-style">
+                </li>
+                
+                <li> 
+                  <div class="title-size-1 input-style input-title-gray">
+                    員工編號
+                  </div>
+                  <input type="text" class="input-size-1 input-style">
+                </li>
+                
+                <li> 
+                  <div class="title-size-1 input-style input-title-gray">
+                    員工編號
+                  </div>
+                  <input type="text" class="input-size-1 input-style">
+                </li>
+
+
+              </ul>
+            </div>
+            </div>
+            
+          </div>   
+          <div class="group-content">
+              <div class="group-content-box">
+              <h2 class="page-list page-add-title">  
+                <div class="page-titlebox">
+                  <span class="page-title">新增員工資料</span>
+                  <div class="line"></div>            
+                </div>                
+              </h2>
+              <div class="inputbox-group">
+                <ul>
+                  <li> 
+                    <div class="title-size-1 input-style input-title-blue ">
+                      員工編號
+                    </div>
+                    <input type="text" class="input-size-1 input-gray input-style">
+                  </li>
+                  <li> 
+                    <div class="title-check title-size-1 input-style">
+                      <div class="check-box">
+                        <input type="checkbox"  name="" id="">
+                        <span class="text">同上</span>
+                      </div>
+                    </div>
+                    <input type="text" class="input-size-1 input-style">
+                  </li>
+                  
+                  <li> 
+                    <div class="title-size-1 input-style input-title-gray">
+                      員工編號
+                    </div>
+                    <input type="text" class="input-size-1 input-style">
+                  </li>
+                  
+                  <li> 
+                    <div class="title-size-1 input-style input-title-gray">
+                      員工編號
+                    </div>
+                    <input type="text" class="input-size-1 input-style">
+                  </li>
+                  
+                  <li> 
+                    <div class="title-size-1 input-style input-title-gray">
+                      員工編號
+                    </div>
+                    <input type="text" class="input-size-1 input-style">
+                  </li>
+                  
+                  <li> 
+                    <div class="title-size-1 input-style input-title-gray">
+                      員工編號
+                    </div>
+                    <input type="text" class="input-size-1 input-style">
+                  </li>
+                  
+  
+                </ul>
+              </div>
+              </div>
+            </div>     
+        </div>  
+
+        <!--頁面內容end-->
+
+        <!--按鈕-->
+        <div class="page-add-btnbox  ">
+          <div class="line"></div>
+          <div class="group">
+            <button type="button" class="btn-style btn-c-blue btn-p-w">
+              <img class="img" src="images/union-1.svg">
+              <span>建立</span>
+            </button>
+            <span class="button-group">
+              <button type="button" class="btn-style btn-c-gray-deep">
+                <img class="img" src="images/main-menu-icon-15.svg">
+                <span>返回</span>
+              </button>
+              <button type="button" class="btn-style btn-c-green">            
+                <img class="img" src="images/main-menu-icon-16.svg">
+              <span>匯入</span>
+            </button>
+        </span>
+          </div>
+        </div>
+        <!--按鈕-->
+
+
+
+      </div>
+    </main>
+  </div>
+  <!-- 手機nav -->
+  <nav class="cellphone">
+    <div class="wrapper">
+      <!-- 上方標題 -->
+      <div class="top">
+        <div class="title">人力資源管理系統</div>
+        <div class="close" onclick="closeCellphoneNav()">
+          <i class="fa-solid fa-x"></i>
+        </div>
+      </div>
+      <!-- 日期 -->
+      <div class="date">
+        <span>2023年10月26日 週三 PM 10:59</span>
+      </div>
+      <!-- nav -->
+      <ul class="nav-list" id="nav-cellphone">
+        <li id="nav-list-cellphone-1">
+          <div class="nav-first" onclick="navCellphoneClick('nav-list-cellphone-1')">
+            <i class="fa fa-lg fa-fw fa-home"></i>
+            <div class="txt">首頁</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              <li >
+                <a href="#" onclick="changePage()">
+                  <div class="txt">首頁任用</div>
+                </a>
+              </li>
+              <li id="nav-second-1">
+                <div class="nav-second-btn" onclick="tmpthird('nav-second-1')">
+                  <div class="txt">基本資料</div>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>    
+                <div class="nav-third">
+                  <ul class="nav-third-list">
+                    <li>
+                      <a href="#">
+                        <div class="txt">
+                          基本資料編輯
+                        </div>                      
+                      </a>
+                    </li>
+                  </ul>
+                </div>  
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id="nav-list-cellphone-2">
+          <div class="nav-first" onclick="navCellphoneClick('nav-list-cellphone-2')">
+            <i class="fa fa-bullhorn fa-fw fa-lg"></i>
+            <div class="txt">系統公告</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              
+              <li id="nav-second-2">
+                <div class="nav-second-btn" onclick="tmpthird('nav-second-2')">
+                  <div class="txt">系統公告</div>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>    
+                <div class="nav-third">
+                  <ul class="nav-third-list">
+                    <li>
+                      <a href="#">
+                        <div class="txt">
+                          系統公告編輯
+                        </div>                      
+                      </a>
+                    </li>
+                  </ul>
+                </div>  
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id="nav-list-cellphone-3">
+          <div class="nav-first" onclick="navCellphoneClick('nav-list-cellphone-3')">
+            <i class="fa fa-lg fa-fw fa-cog"></i>
+            <div class="txt">系統管理</div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="nav-second">
+            <ul class="nav-second-list">
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">系統管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">基本資料</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">勞保投保</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="changePage()">
+                  <div class="txt">人員任用</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+   
+      <!-- 登出 -->
+      <div class="logout">
+        <button type="button">
+          <i class="fa fa-sign-out"></i>
+          <span>登出</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- 手機footer -->
+  <footer class="cellphone">
+    <div class="logo">
+      <img src="./images/Main_Menu_Logo_footer.png" alt="桃機logo" />
+    </div>
+    <div class="version">
+      <p>
+        <span class="title">程式代號：</span>
+        <span class="value">D000-F-01-05-02-06</span>
+      </p>
+      <p>
+        <span class="title">系統版別：</span>
+        <span class="value">v0.0.6</span>
+      </p>
+      <p>
+        <span class="title">版本日期：</span>
+        <span class="value">2023-08-30</span>
+      </p>
+    </div>
+  </footer>
+  <!-- 遮罩 -->
+  <div class="container-cover"></div>
+</body>
+</html>

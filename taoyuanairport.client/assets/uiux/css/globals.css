@@ -1,0 +1,17 @@
+
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,900,400,700");
+@font-face {
+  font-family: "Helvetica Neue-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/62efcc24b713b99b6fc139de/fonts/helveticaneue.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans CJK TC-Bold";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/5fc21d92876fd26947a5404a/files/notosanscjktc-bold.otf")
+    format("opentype");
+}
+
+
+

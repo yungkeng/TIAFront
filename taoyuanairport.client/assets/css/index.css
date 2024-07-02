@@ -1,0 +1,58 @@
+body {
+    font-size: 14px;
+    font-family: "Noto Sans TC", Helvetica;
+}
+
+.btn-style {
+    /*固定*/
+    align-items: center;
+    padding: 16px 48px;
+    position: relative;
+    flex: 0 0 auto;
+    border-color: #0000001a;
+    color: var(--white);
+    display: inline-flex;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid #00000010;
+}
+
+.btn-style .img {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-style span {
+    position: relative;
+    margin-top: 3px;
+    font-family: "Noto Sans TC", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.btn-font span {
+    font-family: "Noto Sans TC", Helvetica;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.form-label {
+    padding: 0;
+}
+
+/* .table-btn-style {
+    align-items: center;
+    padding: 16px 48px;
+    position: relative;
+    flex: 0 0 auto;
+    border-color: #0000001a;
+    color: var(--white);
+    display: inline-flex;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid #00000010;
+} */

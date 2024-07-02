@@ -1,0 +1,888 @@
+.title {
+  color: #ffffff; 
+  font-weight: bold;
+  font-size: 16px;
+}
+.title-8 {
+  color: #ffffff; 
+  font-weight: bold;
+  font-size: 8px;
+}
+.title-10 {
+  color: #ffffff; 
+  font-weight: bold;
+  font-size: 10px;
+}
+.title-12 {
+  color: #ffffff; 
+  font-weight: bold;
+  font-size: 12px;
+}
+.title-background{
+  background-color: #0099cc;
+}
+.row-border{
+  border-style: solid; 
+  border-color: #D3D3D3;
+  border-bottom: 0px; 
+}
+.row-border-bottom{
+  border-style: solid; 
+  border-color: #D3D3D3;
+}
+.row-border-bottom2{
+  border-style: solid; 
+  border-color: #D3D3D3;
+  border-top: 0px; 
+}
+.col-border{
+  border-style: solid; 
+  border-right: 0px;
+  border-color: #D3D3D3;
+}
+th.col-border{
+  border-style: solid;
+  border-right: 0px;
+  border-color: #D3D3D3;
+  border-width: 2px !important;
+}
+td.col-border{
+  border-style: solid;
+  border-right: 0px;
+  border-color: #D3D3D3;
+  border-width: 2px !important;
+}
+.col-border-right{
+  border-style: solid; 
+  border-color: #D3D3D3;
+}
+th.col-border-right{
+  border-style: solid; 
+  border-color: #D3D3D3;
+  border-width: 2px !important;
+}
+td.col-border-right{
+  border-style: solid; 
+  border-color: #D3D3D3;
+  border-width: 2px !important;
+}
+.danger{
+  color: #ff0000;
+  font-size: 14px;
+}
+label{
+  font-size: 14px;
+}
+td{
+  border-style: solid; 
+  border-color: #D3D3D3;
+}
+
+.container1 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container1:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container1 input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container1 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container1 .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* 顏色 */
+:root {
+  --white: #fff;
+  --black: #000;
+  --text-mute: #6c757d;
+  --purple-deep: #655985;
+  --bg-light: rgba(0, 0, 0, 0.1);
+  --bg-dark: rgba(0, 0, 0, 0.4);
+  --bg-dark-cover: rgba(0, 0, 0, 0.7);
+  --bg-gray: rgba(250, 250, 250, 0.9);
+  --bg-blue-deep: rgba(100, 120, 180, 1);
+  /* 按紐 */
+  --btn-blue: #3b82f6;
+  --btn-green: #22c55e;
+  --btn-red: #e61e32;
+}
+
+/* 公用項目 */
+.fa {
+  color: var(--white);
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+button {
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+a:hover {
+  cursor: pointer;
+}
+html {
+  position: relative;
+}
+.none {
+  display: none;
+}
+body {
+  background-color: var(--bg-gray);
+}
+body.pageA-active .pageB {
+  display: none !important;
+}
+body.pageB-active .pageA {
+  display: none !important;
+}
+
+/* 上方header */
+header {
+  height: 68px;
+  padding: 0 10px;
+  display: flex;
+  color: var(--white);
+  background: linear-gradient(
+    90deg,
+    rgba(150, 80, 240, 0.6) 0%,
+    rgba(129, 171, 255, 0.6) 26.56%,
+    rgba(0, 144, 255, 0.6) 57.29%,
+    rgba(20, 180, 180, 0.6) 100%
+  );
+  position: relative;
+  z-index: 2;
+}
+/* 上方header 左側選項 */
+header .navigation {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+/* 上方header home icon */
+header .navigation .home {
+  padding: 13px;
+  border-radius: 10px;
+  display: block;
+  background-color: var(--purple-deep);
+}
+header .navigation .home i {
+  font-size: 24px;
+}
+/* 上方header breadcrumb */
+header .navigation .breadcrumb {
+  height: 48px;
+  margin-left: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background-color: var(--purple-deep);
+}
+header .navigation .breadcrumb li a {
+  padding: 0 20px;
+  font-size: 14px;
+  color: var(--white);
+}
+header .navigation .breadcrumb li a i {
+  font-size: 24px;
+}
+header .navigation .breadcrumb li:not(:last-child):after {
+  content: "＞";
+  width: 16px;
+  height: 6px;
+}
+/* 上方header 右側選項 */
+header .operation {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+header .operation > div:not(:first-child) {
+  margin-left: 20px;
+}
+/* 上方header 右側選項 倒數計時*/
+header .operation .countdown {
+  display: flex;
+}
+header .operation .countdown .alarm {
+  width: 20px;
+  height: 20px;
+}
+header .operation .countdown .txt {
+  margin-left: 10px;
+}
+/* 上方header 右側選項 按鈕*/
+header .operation .buttons {
+  display: flex;
+}
+header .operation .buttons button {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-dark);
+}
+header .operation .buttons button:not(:first-child) {
+  margin-left: 4px;
+}
+header .operation .buttons button i {
+  font-size: 24px;
+}
+/* 上方header 右側選項 「設定」按鈕*/
+header .operation .buttons button.setting {
+  position: relative;
+}
+/* 上方header 右側選項 「設定」按鈕內的版本文字*/
+header .operation .buttons button.setting .version {
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--white);
+  background-color: var(--bg-dark-cover);
+}
+header .operation .buttons button.setting .version p {
+  display: flex;
+  flex-wrap: wrap;
+}
+header .operation .buttons button.setting:hover .version {
+  width: 170px;
+  display: block;
+  transform: translateY(50%);
+}
+header .operation .buttons button.setting:hover .version:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 10px solid;
+  border-color: transparent transparent var(--bg-dark-cover) transparent;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+/* 下方區域 */
+.container {
+  height: calc(100% - 78px);
+  margin: 10px 40px;
+  display: grid;
+  grid-template-columns: 240px auto;
+  gap: 40px;
+}
+
+/* 左側選單列表 */
+.container nav {
+  width: 240px;
+  height: 100%;
+  z-index: 1;
+}
+/* 左側選單列表 */
+.container nav .nav-list > li {
+  width: 100%;
+  height: 160px;
+  box-sizing: border-box;
+  position: relative;
+}
+.container nav .nav-list > li:not(:first-child) {
+  background: linear-gradient(90deg, #a0beff 0%, #1eaabe 100%);
+}
+.container nav .nav-list > li:not(:first-child):hover .nav-first,
+.container nav .nav-list > li.active .nav-first {
+  background-color: var(--bg-blue-deep);
+  cursor: pointer;
+}
+.container nav .nav-list > li:not(:last-child) {
+  border-bottom: 2px solid var(--white);
+}
+.container nav li.active {
+  background-color: var(--bg-blue-deep);
+}
+.container nav .nav-list li .nav-first {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container nav .nav-list li:not(:first-child) .nav-first {
+  color: var(--white);
+}
+.container nav .nav-list li .nav-first i:first-child {
+  font-size: 24px;
+}
+.container nav .nav-list > li:last-child,
+.container nav .nav-list > li:last-child .nav-first {
+  border-radius: 0 0 10px 10px;
+}
+/* 左側選單列表 使用者資訊 */
+.container nav .nav-list > li:first-child {
+  border-radius: 10px 10px 0 0;
+  background-color: var(--white);
+}
+.container nav .nav-list > li:first-child .nav-first {
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 51.04%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+.container nav .nav-list li .nav-first .user {
+  width: 64px;
+  height: 64px;
+}
+.container nav .nav-list li .nav-first .txt {
+  text-align: center;
+  margin-top: 10px;
+}
+.container nav .nav-list li .nav-first .txt .office {
+  font-weight: 700;
+}
+.container nav .nav-list li .nav-first .txt .team {
+  font-weight: 700;
+}
+.container nav .nav-list li .nav-first .txt .last-login {
+  font-size: 0.9em;
+  color: var(--text-mute);
+}
+/* 左側選單第二層 */
+.container nav .nav-list li .nav-second {
+  width: calc(100vw - 360px);
+  display: none; /*預設關閉*/
+  position: absolute;
+  top: 0;
+  left: 280px;
+  z-index: 1;
+}
+.container nav .nav-list li .nav-second .nav-second-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.container nav .nav-list li .nav-second .nav-second-list li {
+  width: 240px;
+  height: 160px;
+  border-radius: 10px;
+  background-color: var(--bg-gray);
+}
+.container nav .nav-list li .nav-second .nav-second-list li:hover {
+  background-color: var(--bg-blue-deep);
+}
+.container nav .nav-list li .nav-second .nav-second-list li:hover a {
+  color: var(--white);
+}
+.container nav .nav-list li .nav-second .nav-second-list li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--black);
+}
+.container nav .nav-list li .nav-second .nav-second-list li a i {
+  font-size: 24px;
+}
+/* 出現第二層選單時 */
+.nav-second-active .container-cover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-dark-cover);
+}
+.nav-second-active .container nav .nav-list > li:not(:last-child) {
+  border-bottom: 2px solid var(--bg-dark-cover);
+}
+.nav-second-active .container nav .nav-list li.active .nav-second {
+  display: block;
+}
+
+/* 左側選單列表 下方logo */
+.container nav .logo {
+  width: 240px;
+  height: 160px;
+  margin-top: 20px;
+}
+
+/* 中間主要區域 */
+.container main .another-area {
+  min-height: 500px;
+}
+.container main .another-area h2 {
+  border-bottom: 1px solid var(--text-mute);
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--bg-blue-deep);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container main .another-area h2 i {
+  color: var(--text-mute);
+}
+/* 中間主要區域 表單範例區域 */
+.container main .another-area .wrapper.pageA {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 中間主要區域 資訊範例區域(pageB) */
+/* .container main .another-area .wrapper .item  */
+.container main .another-area .wrapper .input-group {
+  height: 56px;
+  width: 48%;
+}
+.container main .another-area .wrapper .input-group,
+.container main .another-area .wrapper .item {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container main .another-area .wrapper .input-group label {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 700;
+}
+.container main .another-area .wrapper .item label {
+  font-size: 14px;
+  color: var(--text-mute);
+}
+.container main .another-area .wrapper .input-group input {
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--bg-light);
+}
+.container main .another-area .wrapper .item .value {
+  width: 70%;
+}
+/* 中間主要區域 資訊範例區域(pageB) */
+.container main .another-area .wrapper.pageB {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid var(--bg-light);
+}
+.container main .another-area .wrapper.pageB .person {
+  width: 50%;
+}
+
+/* 中間主要區域 表單範例區域 按鈕 */
+.container main .another-area .buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container main .another-area .buttons button {
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+}
+.container main .another-area .buttons button:not(:last-child) {
+  margin-right: 10px;
+}
+.container main .another-area .buttons button.search {
+  margin-left: auto;
+  background-color: var(--btn-blue);
+}
+.container main .another-area .buttons button.clear {
+  background-color: var(--btn-red);
+}
+.container main .another-area .buttons button.add {
+  background-color: var(--btn-green);
+}
+
+/* 以下為手機版本 */
+/* 上方header 手機版 */
+header.cellphone {
+  height: 60px;
+  box-sizing: border-box;
+  padding: 12px;
+  display: none; /*預設隱藏*/
+  justify-content: space-between;
+  align-items: center;
+}
+header.cellphone h1 {
+  font-size: 16px;
+}
+header.cellphone button {
+  width: 24px;
+  height: 24px;
+  color: var(--white);
+  background-color: transparent;
+}
+
+/* 手機選單(nav) */
+nav.cellphone {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  position: fixed;
+  top: 100%;
+  transition: top 1s;
+  background-color: var(--white);
+}
+/* 手機選單 上方區域 */
+nav.cellphone .wrapper .top {
+  border-radius: 10px 10px 0 0;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  background: linear-gradient(
+    90deg,
+    rgba(150, 80, 240, 0.6) 0%,
+    rgba(129, 171, 255, 0.6) 26.56%,
+    rgba(0, 144, 255, 0.6) 57.29%,
+    rgba(20, 180, 180, 0.6) 100%
+  );
+}
+nav.cellphone .wrapper .top .title {
+  font-size: 16px;
+}
+nav.cellphone .wrapper .top .close:hover {
+  cursor: pointer;
+}
+/* 手機選單 日期 */
+nav.cellphone .wrapper .date {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(217, 217, 217);
+  padding: 12px;
+  color: var(--text-mute);
+}
+/* 手機選單 nav */
+nav.cellphone {
+  height: 80%;
+}
+nav.cellphone .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+nav.cellphone .wrapper .nav-list {
+  padding: 12px;
+  height: calc(100% - 162.5px);
+  overflow: scroll;
+}
+nav.cellphone .wrapper .nav-list > li {
+  border-radius: 10px;
+  position: relative;
+}
+nav.cellphone .wrapper .nav-list > li:not(:last-child) {
+  margin-bottom: 12px;
+}
+/* 手機選單 nav 第一層選單*/
+nav.cellphone .wrapper .nav-list .nav-first {
+  border: 1px solid var(--bg-blue-deep);
+  border-radius: 10px;
+  padding: 20px;
+  font-weight: 700;
+  color: var(--bg-blue-deep);
+  display: flex;
+  align-items: center;
+}
+nav.cellphone .wrapper .nav-list .nav-first:hover {
+  cursor: pointer;
+}
+nav.cellphone .wrapper .nav-list .nav-first .fa {
+  color: var(--bg-blue-deep);
+}
+nav.cellphone .wrapper .nav-list .nav-first .fa-chevron-down {
+  transition: 0.5s;
+}
+nav.cellphone .wrapper .nav-list .nav-first .txt {
+  margin-left: 5px;
+}
+nav.cellphone .wrapper .nav-list .nav-first i:last-child {
+  margin-left: auto;
+}
+/* 手機選單 nav 第二層選單*/
+nav.cellphone .wrapper .nav-list .nav-second {
+  /* 預設關閉 */
+  display: none;
+  /* height: 0;
+  position: relative;
+  visibility: hidden;
+  overflow: hidden; */
+  transition: all 0.5s;
+  transform: translateY(-100%);
+}
+nav.cellphone .wrapper .nav-list .nav-second .txt {
+  margin: 0 10px;
+  border-bottom: 1px solid rgb(230, 231, 232);
+  padding: 5px 10px;
+  color: var(--bg-blue-deep);
+  text-indent: 1rem;
+}
+/* 手機選單 nav 登出 */
+nav.cellphone .wrapper .logout {
+  margin-top: auto;
+  padding: 12px;
+}
+nav.cellphone .wrapper button {
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid rgba(171, 201, 251, 1);
+  border-radius: 10px;
+  font-size: 16px;
+  color: var(--white);
+  background: linear-gradient(0deg, #85b2f9, #85b2f9),
+    linear-gradient(0deg, #abc9fb, #abc9fb);
+}
+nav.cellphone .wrapper button:hover {
+  cursor: pointer;
+}
+/* 手機選單 nav 開啟的時候 */
+.nav-cellphone-active .container-cover {
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-dark-cover);
+}
+.nav-cellphone-active nav.cellphone {
+  transition: top 1s;
+  top: 20%;
+  z-index: 10;
+}
+/* 手機選單 nav 第一層選單 開啟的時候*/
+nav.cellphone .wrapper .nav-list li.active .nav-first {
+  color: var(--white);
+  background-color: var(--bg-blue-deep);
+}
+nav.cellphone .wrapper .nav-list > li.active {
+  border: 1px solid var(--bg-blue-deep);
+}
+nav.cellphone .wrapper .nav-list li.active .nav-first .fa {
+  color: var(--white);
+}
+nav.cellphone .wrapper .nav-list li.active .nav-first .fa-chevron-down {
+  transition: 0.5s;
+  transform: rotate(180deg);
+}
+/* 手機選單 nav 第二層選單 開啟的時候*/
+nav.cellphone .wrapper .nav-list li.active .nav-second {
+  display: block;
+  /* height: auto;
+  visibility: initial; */
+  transition: all 0.5s;
+  transform: translateY(0);
+}
+/* 手機 中間主要區域 breadcrumb */
+.container main .breadcrumb {
+  /* 預設不顯示 */
+  display: none;
+  margin-bottom: 10px;
+}
+.container main .breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+.container main .breadcrumb li a {
+  padding: 0 10px;
+  font-size: 12px;
+  color: var(--text-mute);
+}
+.container main .breadcrumb li a.active {
+  color: var(--black);
+}
+.container main .breadcrumb li:not(:last-child):after {
+  content: "＞";
+  color: var(--text-mute);
+}
+/* 手機footer */
+footer {
+  min-height: 160px;
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+  display: none; /*預設隱藏*/
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(180deg, #a0d2ff 0%, #4678dc 100%);
+}
+footer .logo {
+  width: 60%;
+}
+footer .version {
+  margin-left: 20px;
+  color: var(--white);
+}
+
+/* 以下為RWD */
+/* 手機 */
+@media only screen and (max-width: 576px) {
+  /* 上方header */
+  /* 電腦版本專用消失 */
+  .desktop {
+    display: none;
+  }
+  /* 手機的header */
+  header.cellphone {
+    display: flex;
+  }
+  /* 手機主要區域 */
+  .container {
+    height: auto;
+    display: block;
+    margin: 10px;
+  }
+  /* 手機中間主要區域 breadcrumb */
+  .container main .breadcrumb {
+    /* 預設不顯示 */
+    display: flex;
+  }
+  /* 手機中間主要區域 表單範例區域 */
+  .container main .another-area .wrapper .input-group,
+  .container main .another-area .wrapper .item {
+    width: 100%;
+  }
+  .container main .another-area .wrapper.pageB .person {
+    width: 100%;
+  }
+  .container main .another-area .wrapper.pageB .person:not(:last-child) {
+    border-bottom: 1px solid var(--bg-light);
+  }
+  /* 手機中間主要區域 表單範例區域 按鈕*/
+  .container main .another-area .buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+  }
+  .container main .another-area .buttons button {
+    width: 48%;
+    margin-right: 0 !important;
+  }
+  .container main .another-area .buttons button.search {
+    margin-left: 0;
+  }
+  .container main .another-area .buttons button:last-child {
+    width: 100%;
+  }
+  /* 手機footer */
+  footer.cellphone {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* 平板 */
+/* @media only screen and (max-width: 1024px) {
+} */

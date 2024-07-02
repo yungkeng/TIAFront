@@ -1,0 +1,131 @@
+﻿@charset "utf-8";
+/*---共用----------------------------------------------*/
+*{	margin: 0;padding: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;}
+body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,textarea,blockquote {margin:0;padding:0;vertical-align:top;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;}
+h1,h2,h3,h4,h5,h6{margin:3px 0px;padding:3px 0px;}
+select{font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;}
+
+table{border-collapse:collapse;}
+body{
+	font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;
+	-webkit-text-size-adjust:none; 
+	width:100%;min-width:320px; max-width:1316px;
+	height:100%;
+	background-attachment:fixed;margin:0 auto; 
+	font-size:100%;
+}
+select{ padding:1%; font-size:130%;}
+.alignright{ float:right;}
+.alignleft{ float:left;}
+.shutdown{ position:absolute; top:2%; right:1%; width:5%; height:auto;}
+.Remake{ position:absolute; bottom:2%; right:1%; width:10%; height:auto;}
+.shutdown img,.Remake img{ width:100%;height: auto; border:0;}
+.W100{ width:100%;}
+.W90{ width:90%;}.W95{ width:95%;}
+.W80{ width:80%;}.W85{ width:85%;}
+.W79{ width:79%;}.W75{ width:75%;}
+.W70{ width:70%;}.W65{ width:65%;}
+.W60{ width:60%;}.W55{ width:55%;}
+.W50{ width:50%;}.W45{ width:45%;}
+.W40{ width:40%;}.W35{ width:35%;}
+.W30{ width:30%;}.W25{ width:25%;}
+.W20{ width:20%;}.W15{ width:15%;}
+.W10{ width:10%;}.W5{ width:5%;}
+.checkboxsize{width:25px;height:25px; vertical-align: central; margin-top:-1px;}
+.checkboxsize1{width:23px;height:23px; vertical-align:central; margin-top:-1px;}
+
+.buttonbox{ margin:3px 0; color:#FFF;}
+.buttonbox .btn_272727{ color:#000;text-decoration:none; border:2px #0D2E60 solid;text-align:left; padding:1% 1%; cursor:pointer; margin:2px; font-size:120%; border-radius:10px; line-height:110%;background:#fff;}
+.buttonbox .btn_272727:hover{ color:#000;background:#fff;border-left:28px #67BF00 solid;border-top:2px #67BF00 solid;border-right:2px #67BF00 solid;border-bottom:2px  #67BF00 solid;}
+.choose{color:#fff;text-decoration:none; border:3px rgba(0,0,0,0.46) solid; width:100%; height:auto; text-align:left; padding:1% 1%; cursor:pointer; margin:2px; font-size:120%; border-radius:10px; line-height:110%;background:#004074;.background:#004074;}
+
+.buttonbox .btn_DD8300{ color:#FFF; border-style:none; height:60px; text-align:center; cursor:pointer; margin:2px; font-size:150%; font-weight:bold; border-radius:10px;
+background:#FB9400;.background:#DD8300;
+background:linear-gradient(#FB9400 50%, #DD8300 50%);
+background: -webkit-linear-gradient(#FB9400 50%, #DD8300 50%);
+background: -ms-linear-gradient(#FB9400 50%, #DD8300 50%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FB9400', endColorstr='#DD8300',GradientType=0);}
+.buttonbox .btn_DD8300:hover{background:#D17B00;}
+
+.buttonbox .btn_583d22,.btn_583d22{ color:#FFF; border-style:none; width:105px; height:62px; text-align:center; cursor:pointer; margin:2px; font-size:150%; border-radius:10px;
+background:#583d22;.background:#583d22;
+background:linear-gradient(#785b38 50%, #583d22 50%);
+background: -webkit-linear-gradient(#785b38 50%, #583d22 50%);
+background: -ms-linear-gradient(#785b38 50%, #583d22 50%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#785b38', endColorstr='#583d22',GradientType=0);}
+.buttonbox .btn_583d22:hover,.btn_583d22:hover{background:#583d22;}
+
+.buttonbox .btn_20c4e7{
+	color:#FFF; border-style:none; height:60px; text-align:center; cursor:pointer; margin:2px; font-size:150%; font-weight:bold; border-radius:10px;
+	background:#20c4e7;.background:#20c4e7;
+	background:linear-gradient(#20c4e7 50%, #14afdb 50%);
+	background:-webkit-linear-gradient(#20c4e7 50%, #14afdb 50%);
+	background:-ms-linear-gradient(#20c4e7 50%, #14afdb 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20c4e7', endColorstr='#14afdb',GradientType=0);
+	}
+.buttonbox .btn_20c4e7:hover{background: #069;}
+
+.buttonbox .btn_785b39{
+	color:#FFF; border-style:none; height:60px; text-align:center; cursor:pointer; margin:2px; font-size:150%; font-weight:bold; border-radius:10px;
+	background:#785b39;.background:#785b39;
+	background:linear-gradient(#785b39 50%, #583d22 50%);
+	background:-webkit-linear-gradient(#785b39 50%, #583d22 50%);
+	background:-ms-linear-gradient(#785b39 50%, #583d22 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#785b39', endColorstr='#583d22',GradientType=0);}
+.buttonbox .btn_785b39:hover{background:#000;}
+
+.btn_AA{
+	color:#FFF; border-style:none; height:60px; text-align:center; cursor:pointer; margin:2px; font-size:150%; font-weight:bold; border-radius:10px;
+	background:#785b39;.background:#785b39;
+	background:linear-gradient(#785b39 50%, #583d22 50%);
+	background:-webkit-linear-gradient(#785b39 50%, #583d22 50%);
+	background:-ms-linear-gradient(#785b39 50%, #583d22 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#785b39', endColorstr='#583d22',GradientType=0);}
+.btn_AA:hover{background:#000;}
+/*---共用----------------------------------------------*/
+/* == 手機版型區 =============================== */ 
+@media screen and (max-width:767px) {
+	
+.buttonbox{ margin:0 0 0.5% 0;}
+.buttonbox .btn_583d22,.btn_583d22{ color:#FFF; border-style:none; width:50px; height:29px; text-align:center; cursor:pointer; margin:2px; font-size:80%; border-radius:6px;
+background:#583d22;.background:#583d22;
+background:linear-gradient(#785b38 50%, #583d22 50%);
+background: -webkit-linear-gradient(#785b38 50%, #583d22 50%);
+background: -ms-linear-gradient(#785b38 50%, #583d22 50%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#785b38', endColorstr='#583d22',GradientType=0);}
+.buttonbox .btn_583d22:hover,.btn_583d22:hover{background:#583d22;}
+
+.buttonbox .btn_272727{ color:#000;text-decoration:none; border:2px rgba(0,0,0,0.46) solid; width:100%; height:auto; text-align:left; padding:1% 1%; cursor:pointer; margin:2px; font-size:120%; border-radius:6px;background:#fff;}
+.buttonbox .btn_272727:hover{ color:#000;background:#fff;border-left:28px #67BF00 solid;border-top:2px #67BF00 solid;border-right:2px #67BF00 solid;border-bottom:2px  #67BF00 solid;}
+
+.choose{ color:#fff;text-decoration:none; border:2px rgba(0,0,0,0.46) solid; width:100%; height:auto; text-align:left; padding:1% 1%; cursor:pointer; margin:2px; font-size:120%; border-radius:6px;background:#004074;}
+
+.checkboxsize{width:20px;height:20px; vertical-align: central; margin-top:-1px;}
+.checkboxsize1{width:15px;height:15px; vertical-align:central; margin-top:-1px;}
+	}
+
+/* == 平板版型區 =============================== */
+@media screen and (min-width: 768px) and (max-width: 1316px) {
+.buttonbox{ margin:2px 0; clear:both;}
+.buttonbox .btn_583d22,.btn_583d22{ color:#FFF; border-style:none; width:75px; height:44px; text-align:center; cursor:pointer; margin:2px; font-size:140%; border-radius:10px;
+background:#583d22;.background:#583d22;
+background:linear-gradient(#785b38 50%, #583d22 50%);
+background: -webkit-linear-gradient(#785b38 50%, #583d22 50%);
+background: -ms-linear-gradient(#785b38 50%, #583d22 50%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#785b38', endColorstr='#583d22',GradientType=0);}
+.buttonbox .btn_583d22:hover,.btn_583d22:hover{background:#583d22;}
+
+.buttonbox .btn_272727{ color:#000;text-decoration:none; border:2px #0D2E60 solid; width:100%; height:auto; text-align:left; padding:1% 1%; cursor:pointer; margin:2px; font-size:120%; border-radius:9px;background:#fff;.background:#fff;}
+.buttonbox .btn_272727:hover{ color:#000;background:#fff;border-left:28px #67BF00 solid;border-top:2px #67BF00 solid;border-right:2px #67BF00 solid;border-bottom:2px  #67BF00 solid;}
+.choose{ color:#fff;text-decoration:none; border:2px rgba(0,0,0,0.46) solid; width:100%; height:auto; text-align:left; padding:1% 1%; cursor:pointer; margin:2px; font-size:120%; border-radius:9px;background:#004074;.background:#004074;}
+
+
+.buttonbox .btn_785b39{
+	color:#FFF; border-style:none; height:60px; text-align:center; cursor:pointer; margin:2px; font-size:90%; font-weight:bold; border-radius:10px;
+	background:#785b39;.background:#785b39;
+	background:linear-gradient(#785b39 50%, #583d22 50%);
+	background:-webkit-linear-gradient(#785b39 50%, #583d22 50%);
+	background:-ms-linear-gradient(#785b39 50%, #583d22 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#785b39', endColorstr='#583d22',GradientType=0);}
+.buttonbox .btn_785b39:hover{background:#000;}
+}

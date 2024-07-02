@@ -1,0 +1,726 @@
+@charset "utf-8";
+
+/*新增頁面-----------------------------------------*/
+.container main .page-addbox-flex{
+  display: flex;
+  flex-direction: column;    
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+/*main內標題-------*/
+.container main .another-area .page-add-title{
+    width: 100%;
+}
+.container main .another-area .page-add-title .page-titlebox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  top: 0px;
+}
+/*頁籤-------*/
+.container main .another-area .page-bookmark{
+  display: flex;
+  flex-direction: column;  
+  align-items: flex-start;
+  gap: 4px;  
+  width: 100%;
+}
+.container main .another-area .page-bookmark .bookmarkbox{
+  display: inline-flex;
+  justify-content:space-around;
+  align-items: flex-start;
+  width: 100%;
+}
+.page-bookmark .bookmarkbox li{
+  float: left;
+  width:auto;
+  padding: 2px;
+  text-align: center;
+}
+.page-bookmark .bookmarkbox li .font{
+  color: var(--font-gray);
+  font-size: 14px;
+}
+.page-bookmark .bookmarkbox li .bottom-line{
+  width: 100%;
+  height: 6px;
+  background-color: transparent;  
+  border-radius: 30px;
+  margin-top: 6px;
+}
+#mark-active .font,.page-bookmark .bookmarkbox li:hover .font{
+  color: var(--font-black);
+  font-weight: 700;
+}
+#mark-active .bottom-line,.page-bookmark .bookmarkbox li:hover .bottom-line{
+  background-color: var(--btn-orange);
+}
+
+/*新增頁-中間區排版設定*/
+.container main .another-area .page-content{
+  width: 100%;
+  overflow: hidden;
+  display:flex;
+  flex-direction: column; 
+  gap: 40px;/*大區塊間距*/
+}
+.container main .another-area .page-content .group-content{
+  width: 100%;
+}
+.page-content .group-content .group-content-box{
+  display: flex;  
+  flex-direction: column;  
+  gap: 20px;/*標題和輸入區間距*/
+}
+/*li寬度*/
+.group-content .inputbox-group li{
+  float: left;
+  width:calc(50% - 5px);
+  font-size: 14px;
+  margin:5px 10px 5px 0;
+}
+/*li寬度 一欄*/
+.inputbox-group.onefield li{
+  width:calc(100% - 0px) !important;
+}
+.group-content .inputbox-group li.inputbox-textarea{
+  width: 100%;
+}
+.group-content .inputbox-group li:nth-child(even){
+  margin-right: 0px;
+}
+.group-content .inputbox-group li:not(:last-child){
+
+}
+.group-content .inputbox-group li .font-mark{
+  color: var(--btn-red);
+  font-weight: bold;
+}
+.group-content .inputbox-group .input-style{
+  float: left;
+  margin-right: 10px;
+}
+.group-content .inputbox-group .input-style:last-child{
+  margin-right: 0px;
+}
+.group-content .inputbox-group li .title-size-1,.group-content .inputbox-group li .title-size-2{
+  font-weight: 500;
+}
+/*input輸入設定-新增頁*/
+/*標題寬度*/
+.title-size-1 {/*基本寬度*/
+  border: 0 !important;
+}
+.title-size-2 {/*for中文名欄位*/
+  width: 68px !important ;
+  border: 0 !important;
+}
+/*輸入框寬度*/
+.input-size-1{/*一格*/
+  width: calc(100% - 184px) !important;
+}
+.input-size-2{/*中文名-小格*/
+  width:calc(50% - 136px) !important;
+}
+.input-size-3{/*checkbox用的格*/
+  width: calc(100% - 184px) !important;
+}
+.group-content .inputbox-group .input-font{/*input之間的文字寬度*/
+  width: auto;
+  background: transparent;
+  border: 0;
+  width: auto;
+  padding: 0;
+}
+.inputbox-textarea textarea{/*textarea寬度*/
+  width:calc(100% - 184px);
+}
+/*輸入框-紅框*/
+.input-red-border,.input-black-font{/*下方有文字時-input要加這個class*/
+  margin-right: 0 !important;
+  margin-bottom: 10px;
+}
+.input-red-border{/*紅框*/
+  border: 1px solid var(--btn-red) !important ;
+}
+.input-gray{/*灰底input*/
+  background-color: var(--input-gray-light) !important;
+}
+
+/*輸入框下方文字*/
+.red-font{/*input下方文字-紅色*/
+  display: block;
+  padding-left: 184px;
+  color: var(--btn-red);
+}
+.red-font span{/*input下方文字-紅色驚嘆號*/
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  margin-right: 5px;
+  background-color: var(--btn-red);
+  color: var(--white);
+}
+.black-font{/*黑色文字class*/
+  display: block;
+  text-align: right;
+  color: var(--font-gray);
+}
+
+/*共用-打勾框設定*/
+.group-content .inputbox-group li .check-box{
+  margin-left: 0;
+  padding: 0 10%;
+  font-size: 14px;
+  color: var(--btn-gray-deep);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.group-content .inputbox-group li .check-box .text{
+  margin-left: 20px;
+}
+/*標題內打勾框*/
+.group-content .inputbox-group li .title-check{
+  background-color: transparent;
+}
+.group-content .inputbox-group li .title-check .check-box{
+  margin-left: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+.group-content .inputbox-group li .title-check .text{
+  margin-left: 10px;
+}
+/*input內打勾框-設定*/
+.group-content .inputbox-group li .check-box-in{
+  display: inline-flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+/*input內-select下拉選單*/
+.group-content .inputbox-group li select{
+  color: #C8C8C8;
+}
+.group-content .inputbox-group li select.input-size-2{
+  width: calc(50% - 99px) !important;
+  margin-right: 10px;
+}
+.group-content .inputbox-group li select.input-size-2:last-child{
+  margin-right: 0px;
+}
+
+/*新增頁-下方按鈕*/
+.container main .another-area .page-add-btnbox{
+  width: 100%;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+.container main .another-area .page-add-btnbox .group {
+  width: auto;
+  height: 56px;
+  margin: 40px auto 0 auto;
+}
+.container main .another-area .page-add-btnbox .group button:not(:last-child){
+  margin-right: 20px;
+}
+
+/*綠色版本*/
+.style-green header {
+  background:var(--green-header);
+}
+.style-green .container nav .nav-list > li:not(:first-child) {
+  background: var(--green-header);
+}
+.style-green .container nav .nav-list > li:not(:first-child):hover .nav-first, .container nav .nav-list > li.active .nav-first {
+  background-color: var(--btn-style-green) !important;
+}
+.style-green .container nav li.active {
+  background-color: var(--btn-style-green);
+}
+.style-green .container nav .nav-list li .nav-second .nav-second-list li:hover {
+  background-color: var(--btn-style-green);
+}
+.style-green .table-group .list-page-control .frame-text {
+  background-color: #28786ECC;
+}
+.style-green nav.cellphone .wrapper .top {  
+  background:var(--green-header);
+}
+.style-green nav.cellphone .wrapper .nav-list li.active .nav-first {
+  background-color: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper button {
+  background: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list .nav-first {
+  border: 1px solid var(--btn-style-green);
+  color: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list > li.active {
+  border: 1px solid var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list .nav-second .txt {
+  color: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list .nav-first .fa {
+  color: var(--btn-style-green);
+}
+.style-green .container nav .logo {
+  background:var(--btn-style-green);
+}
+
+/*藍色版本*/
+.style-blue header {
+  background:var(--blue-header);
+}
+.style-blue .container nav .nav-list > li:not(:first-child) {
+  background: var(--blue-header);
+}
+.style-blue .container nav .nav-list > li:not(:first-child):hover .nav-first, .container nav .nav-list > li.active .nav-first {
+  background-color: var(--btn-style-blue) !important;
+}
+.style-blue .container nav li.active {
+  background-color: var(--btn-style-blue);
+}
+.style-blue .container nav .nav-list li .nav-second .nav-second-list li:hover {
+  background-color: var(--btn-style-blue);
+}
+.style-blue .table-group .list-page-control .frame-text {
+  background-color: #1EAABECC;
+}
+.style-blue nav.cellphone .wrapper .top {  
+  background:var(--blue-header);
+}
+.style-blue nav.cellphone .wrapper .nav-list li.active .nav-first {
+  background-color: var(--btn-style-blue);
+}
+.style-blue nav.cellphone .wrapper button {
+  background: var(--btn-style-blue);
+}
+.style-blue nav.cellphone .wrapper .nav-list .nav-first {
+  border: 1px solid var(--btn-style-blue);
+  color: var(--btn-style-blue);
+}
+.style-blue nav.cellphone .wrapper .nav-list > li.active {
+  border: 1px solid var(--btn-style-blue);
+}
+.style-blue nav.cellphone .wrapper .nav-list .nav-second .txt {
+  color: var(--btn-style-blue);
+}
+.style-blue nav.cellphone .wrapper .nav-list .nav-first .fa {
+  color: var(--btn-style-blue);
+}
+.style-blue .container nav .logo {
+  background:var(--btn-style-blue);
+}
+
+/*紅色版本*/
+.style-red header {
+  background:var(--red-header);
+}
+.style-red .container nav .nav-list > li:not(:first-child) {
+  background: var(--red-header);
+}
+.style-red .container nav .nav-list > li:not(:first-child):hover .nav-first, .container nav .nav-list > li.active .nav-first {
+  background-color: var(--btn-style-red) !important;
+}
+.style-red .container nav li.active {
+  background-color: var(--btn-style-red);
+}
+.style-red .container nav .nav-list li .nav-second .nav-second-list li:hover {
+  background-color: var(--btn-style-red);
+}
+.style-red .table-group .list-page-control .frame-text {
+  background-color: #F07850CC;
+}
+.style-red nav.cellphone .wrapper .top {  
+  background:var(--red-header);
+}
+.style-red nav.cellphone .wrapper .nav-list li.active .nav-first {
+  background-color: var(--btn-style-red);
+}
+.style-red nav.cellphone .wrapper button {
+  background: var(--btn-style-red);
+}
+.style-red nav.cellphone .wrapper .nav-list .nav-first {
+  border: 1px solid var(--btn-style-red);
+  color: var(--btn-style-red);
+}
+.style-red nav.cellphone .wrapper .nav-list > li.active {
+  border: 1px solid var(--btn-style-red);
+}
+.style-red nav.cellphone .wrapper .nav-list .nav-second .txt {
+  color: var(--btn-style-red);
+}
+.style-red nav.cellphone .wrapper .nav-list .nav-first .fa {
+  color: var(--btn-style-red);
+}
+.style-red .container nav .logo {
+  background:var(--btn-style-red);
+}
+
+/*紫色版本*/
+.style-purple header {
+  background:var(--purple-header);
+}
+.style-purple .container nav .nav-list > li:not(:first-child) {
+  background: var(--purple-header);
+}
+.style-purple .container nav .nav-list > li:not(:first-child):hover .nav-first, .container nav .nav-list > li.active .nav-first {
+  background-color: var(--btn-style-purple) !important;
+}
+.style-purple .container nav li.active {
+  background-color: var(--btn-style-purple);
+}
+.style-purple .container nav .nav-list li .nav-second .nav-second-list li:hover {
+  background-color: var(--btn-style-purple);
+}
+.style-purple .table-group .list-page-control .frame-text {
+  background-color: #96648CCC;
+}
+.style-purple nav.cellphone .wrapper .top {  
+  background:var(--purple-header);
+}
+.style-purple nav.cellphone .wrapper .nav-list li.active .nav-first {
+  background-color: var(--btn-style-purple);
+}
+.style-purple nav.cellphone .wrapper button {
+  background: var(--btn-style-purple);
+}
+.style-purple nav.cellphone .wrapper .nav-list .nav-first {
+  border: 1px solid var(--btn-style-purple);
+  color: var(--btn-style-purple);
+}
+.style-purple nav.cellphone .wrapper .nav-list > li.active {
+  border: 1px solid var(--btn-style-purple);
+}
+.style-purple nav.cellphone .wrapper .nav-list .nav-second .txt {
+  color: var(--btn-style-purple);
+}
+.style-purple nav.cellphone .wrapper .nav-list .nav-first .fa {
+  color: var(--btn-style-purple);
+}
+.style-purple .container nav .logo {
+  background:var(--btn-style-purple);
+}
+/* 以下為RWD */
+/* 手機========================================================= */
+@media only screen and (max-width: 767px) {
+/*新增頁面-----------------------------------------*/
+.container main .page-addbox-flex {
+  gap: 10px;
+}
+.container main .another-area .page-content {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*頁籤----*/
+.container main .another-area .page-bookmark{
+  display: flex;
+  flex-direction: column;  
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  overflow: auto;
+  margin: auto;
+}
+.container main .another-area .page-bookmark .bookmarkbox{
+  width: 1080px;
+  overflow: auto;
+  margin: auto;
+}
+/*新增頁-中間區排版設定----*/
+/*最上方title間距*/
+.container main .another-area .page-add-title {
+  padding: 10px 0 0 0;
+}
+/*共用上方title*/
+.container main .another-area .page-content .page-add-title {
+  padding: 0;
+}
+/*共用間距*/
+.page-content .group-content .group-content-box {
+  gap: 10px;/*標題和輸入區間距*/
+}
+/*input輸入設定-新增頁*/
+/*標題寬度*/
+.title-size-1 {/*基本寬度*/
+  border: 0 !important;
+}
+.title-size-2 {/*for中文名欄位*/
+  width: 104px !important ;
+  border: 0 !important;
+}
+/*手機版標題特殊寬度*/
+.title-size-p-1{/*身分別-手機版寬度*/
+  width: 78px !important;
+}
+.title-size-p-2{/*身分證居留號-手機版寬度*/
+  width: 174px !important;
+}
+/*輸入框寬度*/
+.input-size-1{/*輸入框只有一欄寬度*/
+  width: calc(100% - 114px) !important;
+}
+.input-size-2{/*輸入框只有一欄寬度*/
+  width: calc(100% - 114px) !important;
+  margin-right: 0 !important;
+}
+.input-size-3{
+  width: calc(100% - 88px) !important;
+  margin-right: 0 !important;
+}
+.input-size-4{/*身分證居留號的輸入框-手機版寬度*/
+  width: calc(100% - 184px) !important;
+  margin-right: 0 !important;
+}
+.input-date{/*日期用輸入框*/
+  width: calc(50% - 66px) !important;
+}
+.group-content .inputbox-group .input-font{
+  padding: 0;
+}
+.group-content .inputbox-textarea textarea{
+  width:calc(100% - 114px);
+}
+/*輸入框下方文字*/
+.red-font{
+  display: block;
+  padding-left:0;
+  color: var(--btn-red);
+}
+.red-font span{
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  margin-right: 5px;
+  background-color: var(--btn-red);
+  color: var(--white);
+}
+/*手機版特殊title寬度 ex.身分別*/
+.input-name .input-style:nth-child(-n+2){
+  margin-bottom:10px ;
+}
+/*li寬度*/
+.group-content .inputbox-group li {
+  float: none;
+  width: 100%;
+  font-size: 14px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+/*li內div標題,input-共用預設*/
+.group-content .input-style{
+  width:104px
+}
+/*input內打勾框box-寬度設定*/
+.group-content .inputbox-group li .check-box {
+  padding: 0 5%;
+  justify-content: space-around;
+}
+/*input內-select下拉選單*/
+.group-content .inputbox-group li select.input-size-2 {
+  width: calc(50% - 59px) !important;
+  margin-right: 10px;
+}
+
+/*下方按鈕*/
+.container main .another-area .page-add-btnbox .line{
+  display: none;
+}
+.container main .another-area .page-add-btnbox .group {
+  width: auto;
+  height: auto;
+  margin: 10px auto 0 auto;    
+  display: flex;
+  flex-direction: column-reverse;/*排列顛倒*/
+  flex-wrap: nowrap;
+}
+/*按鈕寬度設定---*/
+/*兩顆群組*/
+.container main .another-area .page-add-btnbox button {
+  width:calc(50% - 7px);
+  margin-right: 10px !important;
+  justify-content: center;
+}
+.container main .another-area .page-add-btnbox .group .button-group{
+  margin-bottom: 10px;
+}
+.page-add-btnbox .group .button-group button:nth-child(2) {
+  margin-right: 0px !important;
+}
+/*單獨一顆*/
+.btn-p-w{
+  width: 100% !important;
+  justify-content: center;
+}
+
+/*綠色*/
+.style-green nav.cellphone .wrapper .top {  
+  background:var(--green-header);
+}
+.style-green nav.cellphone .wrapper .nav-list li.active .nav-first {
+  background-color: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper button {
+  background: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list .nav-first {
+  border: 1px solid var(--btn-style-green);
+  color: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list > li.active {
+  border: 1px solid var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list .nav-second .txt {
+  color: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list .nav-first .fa {
+  color: var(--btn-style-green);
+}
+}
+/* == 平板版型區 =============================== */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+/*新增頁面-----------------------------------------*/
+.container main .another-area .page-content {
+    gap: 10px;
+}  
+.page-content .group-content .group-content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container main .page-addbox-flex {
+  gap: 10px;
+}
+/*新增頁-中間區排版設定----*/
+/*共用上方title*/
+.container main .another-area .page-content .page-add-title {
+  padding: 0;
+}
+.group-content .inputbox-group li {
+  float: none;
+  width: 100%;
+  font-size: 14px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+/*input輸入設定-新增頁*/
+/*標題寬度*/
+.title-size-2 {
+  width: auto !important ;
+  margin:0 10px;
+}
+.input-size-2{
+  width: calc(50% - 134px) !important;
+  margin-right: 0 !important;
+}
+/*手機版特殊title寬度 ex.身分別*/
+.input-name .input-style:nth-child(-n+2){
+  margin-bottom:10px ;
+}
+/*input內打勾框box-寬度設定*/
+.group-content .inputbox-group li .check-box {
+  justify-content: flex-start;
+  gap: 20px;
+}
+/*input內-select下拉選單*/
+
+.group-content .inputbox-group li select.input-size-2{
+
+}
+
+/* 
+.group-content .inputbox-group li select.input-size-2 {
+  width: calc(50% - 81px) !important;
+  margin-right: 10px;
+} */
+
+/*下方按鈕*/
+/* .container main .another-area .page-add-btnbox .line{
+  display: none;
+}
+.container main .another-area .page-add-btnbox .group {
+  width: auto;
+  height: auto;
+  margin: 10px auto 0 auto;    
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+}
+.container main .another-area .page-add-btnbox .group .button-group{
+  margin-bottom: 10px;
+}
+.container main .another-area .page-add-btnbox button {
+  width:calc(50% - 7px) !important;
+  margin-right: 10px !important;
+}
+.container main .another-area .page-add-btnbox button:nth-child(2) {
+  margin-right: 0px !important;
+}
+
+.container main .another-area .page-add-btnbox .btn-p-w{
+  width: 100% !important;
+  justify-content: center;
+} */
+/*頁籤*/
+.container main .another-area .page-bookmark{
+  display: flex;
+  flex-direction: column;  
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  overflow: auto;
+  margin: auto;
+}
+.container main .another-area .page-bookmark .bookmarkbox{
+  width: 1080px;
+  overflow: auto;
+  margin: auto;
+}
+
+/*綠色*/
+.style-green nav.cellphone .wrapper .top {  
+  background:var(--green-header);
+}
+.style-green nav.cellphone .wrapper .nav-list li.active .nav-first {
+  background-color: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper button {
+  background: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list .nav-first {
+  border: 1px solid var(--btn-style-green);
+  color: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list > li.active {
+  border: 1px solid var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list .nav-second .txt {
+  color: var(--btn-style-green);
+}
+.style-green nav.cellphone .wrapper .nav-list .nav-first .fa {
+  color: var(--btn-style-green);
+}
+} 
